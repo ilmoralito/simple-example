@@ -1,0 +1,7 @@
+import issues.Copy
+
+model {
+	Iterable<Copy> copyList
+}
+
+json tmpl.copy(copyList ?: [])

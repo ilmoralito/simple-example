@@ -1,0 +1,7 @@
+import issues.Copy
+
+model {
+	Copy copy
+}
+
+json tmpl.copy(copy)

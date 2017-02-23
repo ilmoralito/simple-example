@@ -1,0 +1,19 @@
+import issues.Copy
+
+model {
+	Copy copy
+}
+
+// json g.render(copy)
+
+json {
+	id copy.id
+	documentDescription copy.documentDescription
+	copies copy.copies
+	type copy in ExtraCopy ? 'extraCopy' : 'copy'
+	if (copy in ExtraCopy) {
+		ExtraCopy extraCopy = (ExtraCopy)copy
+
+		description extraCopy.description
+	}
+}
